@@ -2,39 +2,45 @@ body {
   margin: 0px;
   background-image: url('back.png');
   background-repeat: repeat;
-
   font-family: "Courier New", Courier, monospace;
 }
 
 .wrapper {
   display: grid;
   grid-template-rows: auto 50px;
-
   height: 100vh;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0.4));
 }
 
 .panel {
-    padding: 0.6em;
+  display: grid;
+  align-content: space-evenly;
+  padding: 0.6em;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  grid-row-gap: 1em;
 }
 
 .footer {
   grid-row: 2;
   align-self: end;
-
   padding-bottom: 0.6em;
   text-align: center;
-  color: #999;
+  font-size: 0.7em;
+  color: #444;
 }
 
-.grid-container {
-  display: grid;
+.footer a {
+  color: #777;
+  text-decoration: none;
 }
 
-.content{
-  grid-row: 5;
+.footer a:hover {
+  color: #000;
+}
+
+.content {
   grid-column: 1 / 6;
-  margin-top: 5%;
-  margin-bottom: 10%;
 }
 
 .content h1 {
@@ -47,29 +53,26 @@ body {
 }
 
 .social {
-  grid-row: 6;
   font-size: 1.5em;
 }
 
-.social a:hover, a:focus, a:visited{
+.social a, .social a:visited{
   color: #000;
   text-decoration: none;
 }
 
-.grid-item {
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 0.6em;
+.social a:hover, .social a:focus {
+  color: #777;
+}
 
+.grid-item {
+  padding: 0.6em;
   text-align: center;
 }
 
 .avatar {
-  grid-row: 1 / 5;
   grid-column: 1 / 6;
   align-self: center;
-
-  margin-top: 5%;
-  padding: 20px;
   font-size: 30px;
   text-align: center;
 }
@@ -83,9 +86,9 @@ img {
 @media only screen and (min-width: 768px) {
   .wrapper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: auto 50% auto;
     grid-template-rows: repeat(3, 1fr);
-
+    grid-gap: 0px;
     width: 100vw;
     height: 100vh;
   }
@@ -93,11 +96,33 @@ img {
     align-self: center;
     grid-column: 2;
     grid-row: 2;
-
-    background: rgba(0, 0, 0, 0.5);
+    grid-gap: 1em;
+    padding: 1.2em;
   }
-  .grid-item {
+  .footer {
+    grid-row: 3;
+    grid-column: 2;
+    align-self: end;
+  }
+  .grid-item {}
+  .avatar {
+    grid-row: 1 / 4;
+  }
+  .content {
+    grid-row: 4 / 6;
+  }
+  .social {
     grid-row: auto;
-    grid-column: 5;
+    grid-column: 6;
+    align-self: center;
+  }
+  img {
+    max-width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .wrapper {
+    grid-template-columns: auto 35% auto;
   }
 }
