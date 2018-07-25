@@ -2,6 +2,28 @@
 <html lang="en">
 
 <head>
+
+  <script>
+      var gaProperty = 'UA-61339835-1';
+      var disableStr = 'ga-disable-' + gaProperty;
+      if (document.cookie.indexOf(disableStr + '=true') > -1) {
+          window[disableStr] = true;
+      }
+      function gaOptout() {
+          document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+          window[disableStr] = true;
+          alert('Das Tracking ist jetzt deaktiviert');
+      }
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-61339835-1', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+  </script>
+
   <meta charset="utf-8">
   <meta name="description" content="Business Information Technology student at Kiel University, working his way through the net and travelling.">
   <meta name="keywords" content="Armin,Jacob,Kiel,web,infrastructure,student,WLAN,network">
@@ -25,7 +47,8 @@
       </div>
       <div class="grid-item content">
         <h1>Armin Jacob</h1>
-        <span>Business Information Technology student at Kiel University, on his way through the net and world. Occasinally working with wireless networks.</span>
+        <span>Business Information Technology student at Kiel University, on his way through the net and world. Occasinally working with wireless networks. <br></span>
+        <span>Also have a look here: <a href="https://slucky.de/" target="_blank" rel="noopener"> Lukas Ha&szlig; <a href="https://beechy.de/" target="_blank" rel="noopener"> and Anton Bracke</span>
       </div>
       <div class="link-container">
         <div class="grid-item social">
@@ -43,7 +66,7 @@
       </div>
     </div>
     <div class="footer">
-      <i class="far fa-copyright"></i> 2018 - <a href="https://www.toptal.com/designers/subtlepatterns/gplay/" target="_blank" rel="noopener">Background CC BY-SA 3.0 Dimitrie Hoekstra</a>
+      <i class="far fa-copyright"></i> 2018 - <a href="https://www.toptal.com/designers/subtlepatterns/gplay/" target="_blank" rel="noopener">Background CC BY-SA 3.0 Dimitrie Hoekstra <a href="/datenschutz.html" target="_blank" rel="noopener">Datenschutzerkl&auml;rung</a>
     </div>
   </div>
 </body>
