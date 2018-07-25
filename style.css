@@ -64,7 +64,7 @@ body {
   font-size: 1em;
 }
 
-.social-container {
+.link-container {
   text-align: center;
   display: grid;
   justify-content: space-around;
@@ -126,7 +126,7 @@ img {
   .content {
     grid-row: 4 / 6;
   }
-  .social-container {
+  .link-container {
     grid-row: 1 / 6;
     align-content: space-around;
   }
